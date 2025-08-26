@@ -6,6 +6,7 @@ export type TProduto = {
     Subtitulo: string,
     Descrição_Card?: string,
     Descrição_Produto: string,
+    fotos?: StaticImageData[],
     Foto1: {large: StaticImageData},
     Foto2?: {large: StaticImageData},
     Foto3?: {large: StaticImageData},

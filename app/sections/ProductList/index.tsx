@@ -1,11 +1,18 @@
 import { ProductCard } from "@/app/componentes/ProductCard";
 import { manifest } from "@/app/lib/manifest";
+import { TProduto } from "@/app/types/TProduto";
+import { StaticImageData } from "next/image";
 
 export async function ProductList() {
   const produtosHomePage = await manifest.from("produtos").find();
-  const produtos = produtosHomePage.data.reverse().slice(0, 3);
-  const produtosComFotos = produtos.map((produto:any) => {
-    const fotos = [produto.Foto1, produto.Foto2, produto.Foto3, produto.Foto4].filter(foto => foto && foto.large);
+  const produtos = (produtosHomePage.data as TProduto[]).reverse().slice(0, 3);
+  const produtosComFotos = produtos.map((produto: TProduto) => {
+    const fotos = [
+      produto.Foto1,
+      produto.Foto2,
+      produto.Foto3,
+      produto.Foto4,
+    ].filter(Boolean) as { large: StaticImageData }[];
 
     return {
       ...produto,
@@ -20,21 +27,19 @@ export async function ProductList() {
       </h1>
 
       <ul className="w-full pb-[8em] flex justify-center flex-wrap gap-[2em] relative">
-        {produtosComFotos.map((produto: any, index: number) => {
-            return (
-                <ProductCard
-                    key={produto.id}
-                    images={produto.fotos}
-                    width={600}
-                    height={400}
-                    alt={produto.Titulo}
-                    title={produto.Titulo}
-                    subtitle={produto.Subtitulo}
-                    description={produto.Descrição_Card}
-                    link={`/produto/${produto.id}`}
-                />
-            )
-        })}
+        {produtosComFotos.map((produto, index) => (
+          <ProductCard
+            key={produto.id}
+            images={produto.fotos ?? []}
+            width={600}
+            height={400}
+            alt={produto.Titulo}
+            title={produto.Titulo}
+            subtitle={produto.Subtitulo}
+            description={produto.Descrição_Card}
+            link={`/produto/${produto.id}`}
+          />
+        ))}
       </ul>
     </section>
   );

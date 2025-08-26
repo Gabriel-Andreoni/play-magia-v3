@@ -10,7 +10,7 @@ export default async function Produto({ params }: { params: Promise<{ id: string
     const { id } = await params;
     const playground: TProduto = await manifest.from("produtos").findOneById(id);
     const playgrounds = await manifest.from("produtos").find();
-    const playgroundsComFotos = playgrounds.data.map((produto:any) => {
+    const playgroundsComFotos: TProduto[] = (playgrounds.data as TProduto[]).map((produto: TProduto) => {
         return {
             ...produto,
             fotos: [produto.Foto1, produto.Foto2, produto.Foto3, produto.Foto4]

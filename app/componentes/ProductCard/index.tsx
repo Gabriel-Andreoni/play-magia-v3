@@ -2,14 +2,14 @@ import Image, { StaticImageData } from "next/image";
 import Link from "next/link";
 
 type ProductImage = {
-  large: string;
+  large: StaticImageData;
 };
 
 type ProductCardProps = {
   images: ProductImage[];
   title: string;
   subtitle: string;
-  description: string;
+  description: string | undefined;
   link: string;
   width: number;
   height: number;
