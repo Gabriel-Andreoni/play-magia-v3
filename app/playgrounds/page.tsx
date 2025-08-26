@@ -1,16 +1,11 @@
 import { Menu } from "../componentes/Menu";
 import { Footer } from "../sections/Footer";
-import { ProductCard } from "../componentes/ProductCard";
 import Image from "next/image";
 
 import SlideImage1 from './images/slide-image-1.jpg';
 import PlaygroundBanner from './images/product-home-banner.jpg';
-import { manifest } from "../lib/manifest";
 
 export default async function Playgrounds() {
-    const produtosRelacionados = await manifest.from("produtos_relacionados").find()
-
-    console.log(produtosRelacionados);
     return (
         <>
             <Menu />
@@ -56,21 +51,6 @@ export default async function Playgrounds() {
             <div className="w-full my-24">
                 <ul className="w-[90%] mx-auto flex flex-wrap gap-16">
                     <h2 className="w-full text-2xl font-semibold">Playgrounds Ideais para o Seu Espaço</h2>
-
-                    {produtosRelacionados.data.map((pR:any) => {
-                        return (
-                            <ProductCard
-                                key={pR.id}
-                                alt={pR.titulo}
-                                image={pR.foto_1.large}
-                                title={pR.titulo}
-                                description={pR.descricao}
-                                width={500}
-                                height={500}
-                                link={`/product/${pR.id}`}
-                            />
-                        )
-                    })}
                 </ul>
             </div>
 

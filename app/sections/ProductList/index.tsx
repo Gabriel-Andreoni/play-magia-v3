@@ -27,7 +27,7 @@ export async function ProductList() {
       </h1>
 
       <ul className="w-full pb-[8em] flex justify-center flex-wrap gap-[2em] relative">
-        {produtosComFotos.map((produto, index) => (
+        {produtosComFotos.map((produto) => (
           <ProductCard
             key={produto.id}
             images={produto.fotos ?? []}
