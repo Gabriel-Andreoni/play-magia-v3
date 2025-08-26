@@ -1,0 +1,53 @@
+name: MV Playgrounds
+entities:
+  produto:
+    nameSingular: produto
+    properties:
+      - name: Titulo
+      - name: Subtitulo
+      - name: Descrição_Card
+        type: text
+      - name: Descrição_Produto
+        type: text
+      - name: Foto1
+        type: image
+        options:
+          sizes:
+            large:
+              width: 1200
+      - name: Foto2
+        type: image
+        options:
+          sizes:
+            large:
+              width: 1200
+      - name: Foto3
+        type: image
+        options:
+          sizes:
+            large:
+              width: 1200
+      - name: Foto4
+        type: image
+        options:
+          sizes:
+            large:
+              width: 1200
+    policies:
+      read:
+        - access: public
+  
+  clientes:
+    nameSingular: Clientes
+    properties:
+      - name: Foto
+        type: image
+        options:
+          sizes:
+            large:
+              width: 800
+      - name: Cliente
+        type: text
+    policies:
+      read:
+        - access: public
