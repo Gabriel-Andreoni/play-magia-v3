@@ -4,6 +4,7 @@ import { ProductSlide } from "@/app/componentes/ProductSlide";
 import { manifest } from "@/app/lib/manifest";
 import { Footer } from "@/app/sections/Footer";
 import { TProduto } from "@/app/types/TProduto";
+import { StaticImageData } from "next/image";
 
 
 export default async function Produto({ params }: { params: Promise<{ id: string }> }) {
@@ -11,9 +12,16 @@ export default async function Produto({ params }: { params: Promise<{ id: string
     const playground: TProduto = await manifest.from("produtos").findOneById(id);
     const playgrounds = await manifest.from("produtos").find();
     const playgroundsComFotos: TProduto[] = (playgrounds.data as TProduto[]).map((produto: TProduto) => {
+        const fotos = [
+            produto.Foto1?.large,
+            produto.Foto2?.large,
+            produto.Foto3?.large,
+            produto.Foto4?.large,
+        ].filter(Boolean) as StaticImageData[];
+
         return {
             ...produto,
-            fotos: [produto.Foto1, produto.Foto2, produto.Foto3, produto.Foto4]
+            fotos,
         }
     })
 
@@ -50,11 +58,14 @@ export default async function Produto({ params }: { params: Promise<{ id: string
                     <h2 className="w-full text-2xl font-semibold">
                         Produtos Relacionados
                     </h2>
-                    {playgroundsComFotos.map((produto:any) => {
+                    {playgroundsComFotos.map((produto: TProduto) => {
+                        const images =
+                            produto.fotos?.map((img) => ({ large: img })) ?? [];
+
                         return (
                             <ProductCard
                                 key={produto.id}
-                                images={produto.fotos}
+                                images={images}
                                 width={600}
                                 height={400}
                                 alt={produto.Titulo}
@@ -63,7 +74,7 @@ export default async function Produto({ params }: { params: Promise<{ id: string
                                 description={produto.Descrição_Card}
                                 link={`/produto/${produto.id}`}
                             />
-                        )
+                        );
                     })}
                 </ul>
             </div>
