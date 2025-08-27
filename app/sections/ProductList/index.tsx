@@ -20,6 +20,9 @@ export async function ProductList() {
     }
   });
 
+  console.log("API_URL:", process.env.API_URL);
+  console.log("produtosHomePage.data:", produtosHomePage.data);
+
   return (
     <section className="w-full min-h-auto px-[6em] bg-[#A05625]" id="produtos">
       <h1 className="py-2 flex flex-col text-center text-[6em] text-white text-balance">
