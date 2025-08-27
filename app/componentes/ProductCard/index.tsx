@@ -2,7 +2,7 @@ import Image, { StaticImageData } from "next/image";
 import Link from "next/link";
 
 type ProductImage = {
-  large: StaticImageData;
+  large: string;
 };
 
 type ProductCardProps = {
@@ -26,11 +26,15 @@ export function ProductCard({
   height,
   alt,
 }: ProductCardProps) {
-  console.log(images);
+
+  const imagesWithURL = images.map((i) => {
+    return {large: i.large.replace("http://localhost:1111", "https://api-play-magia-production.up.railway.app")}
+  })
+
   return (
     <li className="w-[25%] list-none rounded-md relative  transition-all duration-300 hover:-translate-y-[3%]">
       <div className="w-full h-[300px] rounded-t-md overflow-hidden">
-        {images.map((image, index) =>
+        {imagesWithURL.map((image, index) =>
           image?.large ? (
             <Image
               key={index}

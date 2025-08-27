@@ -4,8 +4,7 @@ const isDev = process.env.NODE_ENV === "development";
 
 const nextConfig: NextConfig = {
   images: {
-    remotePatterns: isDev
-      ? [
+    remotePatterns: [
           {
             protocol: 'http',
             hostname: 'localhost',
@@ -18,8 +17,6 @@ const nextConfig: NextConfig = {
             port: "1111",
             pathname: "/storage/produtos/**"
           },
-        ]
-      : [
           {
             protocol: 'https',
             hostname: 'api-play-magia-production.up.railway.app',
@@ -29,8 +26,8 @@ const nextConfig: NextConfig = {
             protocol: 'https',
             hostname: 'api-play-magia-production.up.railway.app',
             pathname: "/storage/produtos/**"
-          },
-        ]
+          }
+        ],
   }
 };
 
