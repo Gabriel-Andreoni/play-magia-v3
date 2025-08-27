@@ -1,5 +1,5 @@
 import Manifest from "@mnfst/sdk";
 
-const apiURL = "http://localhost:1111" || `${process.env.API_URL}/api`;
+const apiURL = `${process.env.API_URL}/api` || "http://localhost:1111";
 
 export const manifest = new Manifest(apiURL);
