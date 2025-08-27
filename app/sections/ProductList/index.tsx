@@ -20,13 +20,10 @@ export async function ProductList() {
     }
   });
 
-  console.log("API_URL:", process.env.API_URL);
-  console.log("produtosHomePage.data:", produtosHomePage.data);
-
   return (
     <section className="w-full min-h-auto px-[6em] bg-[#A05625]" id="produtos">
       <h1 className="py-2 flex flex-col text-center text-[6em] text-white text-balance">
-        O Playground <span className="text-[#FAE8BF]">{process.env.API_URL}!</span>
+        O Playground <span className="text-[#FAE8BF]">dos sonhos está aqui!</span>
       </h1>
 
       <ul className="w-full pb-[8em] flex justify-center flex-wrap gap-[2em] relative">
