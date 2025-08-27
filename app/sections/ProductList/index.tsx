@@ -1,9 +1,10 @@
 import { ProductCard } from "@/app/componentes/ProductCard";
-import { manifest } from "@/app/lib/manifest";
+import { getManifest } from "@/app/lib/manifest";
 import { TProduto } from "@/app/types/TProduto";
 import { StaticImageData } from "next/image";
 
 export async function ProductList() {
+  const manifest = getManifest()
   const produtosHomePage = await manifest.from("produtos").find();
   const produtos = (produtosHomePage.data as TProduto[]).reverse().slice(0, 3);
   const produtosComFotos = produtos.map((produto: TProduto) => {

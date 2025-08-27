@@ -1,13 +1,14 @@
 import { Menu } from "@/app/componentes/Menu";
 import { ProductCard } from "@/app/componentes/ProductCard";
 import { ProductSlide } from "@/app/componentes/ProductSlide";
-import { manifest } from "@/app/lib/manifest";
+import { getManifest } from "@/app/lib/manifest";
 import { Footer } from "@/app/sections/Footer";
 import { TProduto } from "@/app/types/TProduto";
 import { StaticImageData } from "next/image";
 
 
 export default async function Produto({ params }: { params: Promise<{ id: string }> }) {
+    const manifest = getManifest()
     const { id } = await params;
     const playground: TProduto = await manifest.from("produtos").findOneById(id);
     const playgrounds = await manifest.from("produtos").find();
