@@ -58,24 +58,7 @@ export default async function Produto({ params }: { params: Promise<{ id: string
                     <h2 className="w-full text-2xl font-semibold">
                         Produtos Relacionados
                     </h2>
-                    {playgroundsComFotos.map((produto: TProduto) => {
-                        const images =
-                            produto.fotos?.map((img) => ({ large: img })) ?? [];
-
-                        return (
-                            <ProductCard
-                                key={produto.id}
-                                images={images}
-                                width={600}
-                                height={400}
-                                alt={produto.Titulo}
-                                title={produto.Titulo}
-                                subtitle={produto.Subtitulo}
-                                description={produto.Descrição_Card}
-                                link={`/produto/${produto.id}`}
-                            />
-                        );
-                    })}
+                    
                 </ul>
             </div>
 
