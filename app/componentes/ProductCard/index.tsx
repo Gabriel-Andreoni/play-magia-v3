@@ -23,21 +23,26 @@ export function ProductCard({
   height,
   alt,
 }: ProductCardProps) {
+  images.map((i, index) => {
+    let hasMoreImage = i.large.search("foto2");
+    return {
+      ...i,
+      large: !!hasMoreImage && i.large.replace("http://localhost:1111", "https://api-play-magia-production.up.railway.app")
+    }
+  })
   return (
     <li className="w-[25%] list-none rounded-md relative  transition-all duration-300 hover:-translate-y-[3%]">
       <div className="w-full h-[300px] rounded-t-md overflow-hidden">
-        {images.map((image, index) =>
-          image?.large ? (
-            <Image
-              key={index}
-              src={image.large.replace("http://localhost:1111", "https://api-play-magia-production.up.railway.app")}
-              alt={alt}
-              width={width}
-              height={height}
-              className="w-full h-full object-cover rounded-t-md"
-            />
-          ) : null
-        )}
+        {images.map((image, index) => (
+          <Image
+            key={index}
+            src={image.large.replace("http://localhost:1111", "https://api-play-magia-production.up.railway.app")}
+            alt={alt}
+            width={width}
+            height={height}
+            className="w-full h-full object-cover rounded-t-md"
+          />
+        ))}
       </div>
 
       <div className="w-full p-4 bg-white rounded-b-md">

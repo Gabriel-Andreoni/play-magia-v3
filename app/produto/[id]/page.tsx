@@ -19,6 +19,8 @@ export default async function Produto({ params }: { params: Promise<{ id: string
         }
     });
 
+    console.log(produtosComFotos)
+
     return (
         <section className="w-full">
             <Menu />
