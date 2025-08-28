@@ -11,7 +11,7 @@ export function ProductSlide({ Titulo, Foto1, Foto2, Foto3, Foto4 }: Pick<TProdu
         <SwiperSlideComponent>
             <SwiperSlide className="w-[600px] h-[400px] rounded-[50px]">
                 <Image
-                    src={Foto1.large}
+                    src={Foto1.large.replace("http://localhost:1111", "https://api-play-magia-production.up.railway.app")}
                     alt={Titulo}
                     width={600}
                     height={400}
