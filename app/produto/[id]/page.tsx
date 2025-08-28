@@ -10,22 +10,6 @@ import { StaticImageData } from "next/image";
 export default async function Produto({ params }: { params: Promise<{ id: string }> }) {
     const { id } = await params;
     const playground: TProduto = await manifest.from("produtos").findOneById(id);
-    const playgrounds = await manifest.from("produtos").find();
-    const playgroundsComFotos: TProduto[] = (playgrounds.data as TProduto[]).map((produto: TProduto) => {
-        const fotos = [
-            produto.Foto1?.large,
-            produto.Foto2?.large,
-            produto.Foto3?.large,
-            produto.Foto4?.large,
-        ].filter(Boolean) as StaticImageData[];
-
-        return {
-            ...produto,
-            fotos,
-        }
-    })
-
-
     return (
         <section className="w-full">
             <Menu />
