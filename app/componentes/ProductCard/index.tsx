@@ -23,8 +23,8 @@ export function ProductCard({
   height,
   alt,
 }: ProductCardProps) {
-  let updatedImages = images.map((i) => {
-    let hasMoreImage = i.large.search("foto2");
+  const updatedImages = images.map((i) => {
+    const hasMoreImage = i.large.search("foto2");
     return {
       ...i,
       large: hasMoreImage ? i.large.replace("http://localhost:1111", "https://api-play-magia-production.up.railway.app") : ''
