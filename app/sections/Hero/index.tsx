@@ -4,6 +4,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 
 export function Hero() {
+    console.log("AQUIIIIIIIIIIIIIIIIIIIIIIIIIIIIII")
     return (
         <section className="w-full h-screen p-16 flex flex-col overflow-hidden ">
             <div className={`relative w-full h-[85%] flex flex-col justify-center items-center rounded-[4em] bg-cover bg-center shadow-2xl shadow-slate-950/50 z-[10] after:content-[''] after:w-full after:h-full after:absolute after:inset-0 after:bg-black/50 after:rounded-[4em] after:z-[-1] `} style={{ backgroundImage: `url(${HeroImage.src})` }}>
