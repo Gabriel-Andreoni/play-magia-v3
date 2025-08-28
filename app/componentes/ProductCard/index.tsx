@@ -23,7 +23,7 @@ export function ProductCard({
   height,
   alt,
 }: ProductCardProps) {
-  images.map((i, index) => {
+  images.map((i) => {
     let hasMoreImage = i.large.search("foto2");
     return {
       ...i,
