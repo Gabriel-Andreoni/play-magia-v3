@@ -6,12 +6,12 @@ export async function ProductList() {
   const produtosHomePage = await manifest.from("produtos").find();
   const produtos = (produtosHomePage.data as TProduto[]).reverse().slice(0, 3);
 
-  const produtosComFotos = produtos.map((produto:TProduto) => {
+  const produtosComFotos = produtos.map(({ Foto1, Foto2, Foto3, Foto4, ...rest }) => {
     return {
-      ...produto,
-      fotos: [produto.Foto1, produto.Foto2, produto.Foto3, produto.Foto4]
+      ...rest,
+      Fotos: [Foto1, Foto2, Foto3, Foto4].filter((foto) => foto != null)
     }
-  });
+  })
 
   return (
     <section className="w-full min-h-auto px-[6em] bg-[#A05625]" id="produtos">
@@ -23,7 +23,7 @@ export async function ProductList() {
         {produtosComFotos.map((produto) => (
           <ProductCard
             key={produto.id}
-            images={produto.fotos.filter((foto): foto is { large: string } => foto !== undefined)}
+            images={produto.Fotos}
             width={600}
             height={400}
             alt={produto.Titulo}
