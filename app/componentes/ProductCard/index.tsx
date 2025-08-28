@@ -30,7 +30,7 @@ export function ProductCard({
           image?.large ? (
             <Image
               key={index}
-              src={image.large}
+              src={image.large.replace("http://localhost:1111", "https://api-play-magia-production.up.railway.app")}
               alt={alt}
               width={width}
               height={height}
