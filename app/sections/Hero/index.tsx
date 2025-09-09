@@ -2,6 +2,7 @@ import HeroImage from './img/hero-background.jpg';
 import ArrowDown from './img/down-arrow.png'
 import Image from 'next/image';
 import Link from 'next/link';
+import { WhatsAppButton } from '@/app/componentes/WhatsAppButton';
 
 export function Hero() {
     return (
@@ -19,7 +20,7 @@ export function Hero() {
                 <Link className="w-fit p-6 mt-8 rounded-full bg-[#4D5020]/95 text-white cursor-pointer text-[1.1em]" href="#produtos">
                     <Image src={ArrowDown.src} alt="ícone de um seta para baixo" width={25} height={25} />
                 </Link>
-
+                <WhatsAppButton />
             </div>
         </section>
     );

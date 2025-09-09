@@ -14,7 +14,7 @@ export function Menu() {
     onMouseEnter={() => setOnHover((prevState) => !prevState)}
     onMouseLeave={() => setOnHover((prevState) => !prevState)}
     >
-      <Image className="ml-6 rounded-full" width={60} height={60} src={Logo.src} alt="Logo da Play Magia" />
+      <Image className="ml-6 rounded-full" width={100} height={100} src={Logo.src} alt="Logo da Play Magia" />
       <nav className="w-full h-full">
         <ul className="w-full h-full flex justify-center items-center gap-[4em]">
           <li className="list-none text-[1.2em] font-bold cursor-pointer">

@@ -4,6 +4,7 @@ import Image from "next/image";
 
 import SlideImage1 from './images/slide-image-1.jpg';
 import PlaygroundBanner from './images/product-home-banner.jpg';
+import { WhatsAppButton } from "../componentes/WhatsAppButton";
 
 export default async function Playgrounds() {
     return (
@@ -53,6 +54,8 @@ export default async function Playgrounds() {
                     <h2 className="w-full text-2xl font-semibold">Playgrounds Ideais para o Seu Espaço</h2>
                 </ul>
             </div>
+
+            <WhatsAppButton />
 
             <Footer />
         </>

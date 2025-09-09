@@ -8,6 +8,7 @@ import Image from "next/image";
 
 import ProductHomeBanner from './images/product-home-banner.jpg'
 import Avatar from './images/avatar.png';
+import { WhatsAppButton } from "../componentes/WhatsAppButton";
 
 export default function AboutPage() {
   return (
@@ -55,7 +56,7 @@ export default function AboutPage() {
           <div className="w-full lg:w-1/2 flex justify-center p-4">
             <div className="w-[90%] h-[60%]">
               <SwiperSlideComponent>
-                <SwiperSlide className="w-[200px] h-[400px] p-16 rounded-3xl bg-[#FAE8BF]">
+                <SwiperSlide className="w-[200px] h-[400px] p-16 flex-col rounded-3xl bg-[#FAE8BF]">
                   <div className="flex gap-4">
                     <Image src={Avatar} alt="Avatar" width={80} height={80} />
                     <span>
@@ -70,7 +71,7 @@ export default function AboutPage() {
                   </div>
                 </SwiperSlide>
 
-                <SwiperSlide className="w-[200px] h-[400px] p-16 rounded-3xl bg-[#585C2B]">
+                <SwiperSlide className="w-[200px] h-[400px] p-16 flex-col rounded-3xl bg-[#585C2B]">
                   <div className="flex gap-4">
                     <Image src={Avatar} alt="Avatar" width={80} height={80} />
                     <span>
@@ -85,7 +86,7 @@ export default function AboutPage() {
                   </div>
                 </SwiperSlide>
 
-                <SwiperSlide className="w-[200px] h-[400px] p-16 rounded-3xl bg-[#BC7823]">
+                <SwiperSlide className="w-[200px] h-[400px] p-16 flex-col rounded-3xl bg-[#BC7823]">
                   <div className="flex gap-4">
                     <Image src={Avatar} alt="Avatar" width={80} height={80} />
                     <span>
@@ -104,7 +105,7 @@ export default function AboutPage() {
           </div>
         </div>
       </main>
-
+      <WhatsAppButton />
       <Footer />
     </>
   );

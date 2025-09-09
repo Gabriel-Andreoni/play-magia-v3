@@ -8,6 +8,7 @@ import Image from "next/image";
 import { useEffect, useState } from "react";
 import { TProduto } from "../types/TProduto";
 import PlusIcon from './img/plus.png';
+import { WhatsAppButton } from "../componentes/WhatsAppButton";
 
 
 export default function Orcamento() {
@@ -116,6 +117,8 @@ export default function Orcamento() {
           </form>
         </div>
       </div>
+
+      <WhatsAppButton />
     </div>
   );
 }
