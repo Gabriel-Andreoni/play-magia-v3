@@ -10,7 +10,7 @@ export function Menu() {
   const [onHover, setOnHover] = useState<boolean>(false);
   return (
     <header
-    className={`w-full ${onHover ? 'h-[120px]' : 'h-[80px]'} flex items-center sticky top-0 backdrop-blur-md shadow-lg  transition-[height] duration-300 shadow-slate-950/5 z-[1000]`}
+    className={`w-full h-[110px] flex items-center sticky top-0 backdrop-blur-md shadow-lg  transition-[height] duration-300 shadow-slate-950/5 z-[1000]`}
     onMouseEnter={() => setOnHover((prevState) => !prevState)}
     onMouseLeave={() => setOnHover((prevState) => !prevState)}
     >
@@ -43,7 +43,7 @@ export function Menu() {
           </li>
           <li className="list-none text-[1.2em] font-bold cursor-pointer">
             <Link
-              href="#"
+              href="/orcamento"
               className="text-black relative after:content-[''] after:absolute after:left-0 after:top-[110%] after:w-1/2 after:h-[2px] after:bg-[#4D5020] after:transition-all after:duration-300 hover:after:w-full"
             >
               Faça um Orçamento

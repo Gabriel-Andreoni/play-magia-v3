@@ -10,3 +10,12 @@ body {
   
   user-select: none;
 }
+
+.swiper-cards .swiper-slide {
+  display: flex !important;
+  justify-content: center !important;
+}
+
+.swiper-3d .swiper-slide-shadow {
+  background: none !important;
+}

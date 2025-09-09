@@ -6,13 +6,13 @@ import 'swiper/css';
 import 'swiper/css/effect-cards';
 
 
-export function SwiperSlideComponent({children}: {children: React.ReactNode}) {
+export function SwiperSlideComponent({children, className}: {children: React.ReactNode, className?:string}) {
     return (
         <Swiper
             effect={'cards'}
             grabCursor={true}
             modules={[EffectCards]}
-            className={`w-full h-full`}
+            className={`w-full h-full ${className}`}
         >
             {children}
         </Swiper>
