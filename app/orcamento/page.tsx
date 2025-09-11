@@ -57,7 +57,7 @@ export default function Orcamento() {
                     data-title={`Playground ${f.titulo}`}
                   >
                     <Image
-                      src={f.fotos!.large}
+                      src={f.fotos!.large.replace("http://localhost:1111", "https://api-play-magia-production.up.railway.app")}
                       alt={f.titulo}
                       width={500}
                       height={300}
