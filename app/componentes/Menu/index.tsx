@@ -7,12 +7,9 @@ import Logo from './img/play-magia-logo.png';
 import Image from 'next/image';
 
 export function Menu() {
-  const [onHover, setOnHover] = useState<boolean>(false);
   return (
     <header
     className={`w-full h-[110px] flex items-center sticky top-0 backdrop-blur-md shadow-lg  transition-[height] duration-300 shadow-slate-950/5 z-[1000]`}
-    onMouseEnter={() => setOnHover((prevState) => !prevState)}
-    onMouseLeave={() => setOnHover((prevState) => !prevState)}
     >
       <Image className="ml-6 rounded-full" width={100} height={100} src={Logo.src} alt="Logo da Play Magia" />
       <nav className="w-full h-full">

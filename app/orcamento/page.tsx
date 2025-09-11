@@ -25,7 +25,7 @@ export default function Orcamento() {
     getProdutos()
   }, [])
 
-  const fotosRaw = produtos.map((p: any) => {
+  const fotosRaw = produtos.map((p: Pick<TProduto, 'Titulo' | 'Foto1' | 'Foto2' | 'Foto3' | 'Foto4'>) => {
     return [
       {
         titulo: p.Titulo,
@@ -57,7 +57,7 @@ export default function Orcamento() {
                     data-title={`Playground ${f.titulo}`}
                   >
                     <Image
-                      src={f.fotos.large}
+                      src={f.fotos!.large}
                       alt={f.titulo}
                       width={500}
                       height={300}
