@@ -29,7 +29,7 @@ export default function Orcamento() {
     return [
       {
         titulo: p.Titulo,
-        fotos: [p.Foto1, p.Foto2, p.Foto3, p.Foto4].filter((f: any) => f != null)
+        fotos: [p.Foto1, p.Foto2, p.Foto3, p.Foto4].filter((f) => f != null)
       }
     ]
   }).flat();
