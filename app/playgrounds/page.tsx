@@ -1,19 +1,21 @@
+"use client";
+
 import { Menu } from "../componentes/Menu";
 import { Footer } from "../sections/Footer";
-import Image from "next/image";
 
-import SlideImage1 from './images/slide-image-1.jpg';
 import PlaygroundBanner from './images/product-home-banner.jpg';
-import { WhatsAppButton } from "../componentes/WhatsAppButton";
+import { ProdutosRelacionados } from "../componentes/ProdutosRelacionados";
+import { BotaoWhatsAppp } from "../componentes/BotaoWhatsAppp";
+import { SlideDosProdutos } from "../componentes/SlideDosProdutos";
 
-export default async function Playgrounds() {
+export default function Playgrounds() {
     return (
         <>
             <Menu />
 
             <main className="w-full flex flex-col relative">
                 {/* HEADER COM IMAGEM DE FUNDO */}
-                <div className="w-full h-[60vh] bg-cover bg-center relative" style={{ backgroundImage: `url(${PlaygroundBanner.src})`}}>
+                <div className="w-full h-[60vh] bg-cover bg-center relative" style={{ backgroundImage: `url(${PlaygroundBanner.src})` }}>
                     <div className="absolute inset-0 bg-black/30" />
                 </div>
 
@@ -41,8 +43,8 @@ export default async function Playgrounds() {
 
                     {/* Slide */}
                     <div className="w-1/2 px-4 pb-4 flex justify-center">
-                        <div className="w-[90%] h-auto p-16 bg-[#a52a2a] flex justify-center items-center rounded-[1.8em]">
-                            <Image src={SlideImage1} alt="Slide Image 1" width={600} height={400} className="rounded-[1.8em]" />
+                        <div className="w-full p-8">
+                            <SlideDosProdutos />
                         </div>
                     </div>
                 </div>
@@ -52,10 +54,12 @@ export default async function Playgrounds() {
             <div className="w-full my-24">
                 <ul className="w-[90%] mx-auto flex flex-wrap gap-16">
                     <h2 className="w-full text-2xl font-semibold">Playgrounds Ideais para o Seu Espaço</h2>
+
+                    <ProdutosRelacionados quantProdutos={17} />
                 </ul>
             </div>
 
-            <WhatsAppButton />
+            <BotaoWhatsAppp />
 
             <Footer />
         </>

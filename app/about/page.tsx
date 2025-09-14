@@ -8,7 +8,7 @@ import Image from "next/image";
 
 import ProductHomeBanner from './images/product-home-banner.jpg'
 import Avatar from './images/avatar.png';
-import { WhatsAppButton } from "../componentes/WhatsAppButton";
+import { BotaoWhatsAppp } from "../componentes/BotaoWhatsAppp";
 
 export default function AboutPage() {
   return (
@@ -105,7 +105,7 @@ export default function AboutPage() {
           </div>
         </div>
       </main>
-      <WhatsAppButton />
+      <BotaoWhatsAppp />
       <Footer />
     </>
   );

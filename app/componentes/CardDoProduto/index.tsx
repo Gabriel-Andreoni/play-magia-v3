@@ -31,7 +31,6 @@ export function ProductCard({
     }
   });
 
-  console.log(updatedImages)
   return (
     <li className="w-[25%] list-none rounded-md relative  transition-all duration-300 hover:-translate-y-[3%]">
       <div className="w-full h-[300px] rounded-t-md overflow-hidden">

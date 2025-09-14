@@ -1,6 +1,6 @@
 import { Menu } from "@/app/componentes/Menu";
-import { ProductCard } from "@/app/componentes/ProductCard";
-import { ProductSlide } from "@/app/componentes/ProductSlide";
+import { ProductCard } from "@/app/componentes/CardDoProduto";
+import { ProductSlide } from "@/app/componentes/SlideDoProduto";
 import { manifest } from "@/app/lib/manifest";
 import { Footer } from "@/app/sections/Footer";
 import { TProduto } from "@/app/types/TProduto";

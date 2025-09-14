@@ -1,4 +1,4 @@
-import { ProductCard } from "@/app/componentes/ProductCard";
+import { ProductCard } from "@/app/componentes/CardDoProduto";
 import { manifest } from "@/app/lib/manifest";
 import { TProduto } from "@/app/types/TProduto";
 

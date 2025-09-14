@@ -12,7 +12,7 @@ export function SwiperSlideComponent({children, className}: {children: React.Rea
             effect={'cards'}
             grabCursor={true}
             modules={[EffectCards]}
-            className={`w-full h-full ${className}`}
+            className={`${className}`}
         >
             {children}
         </Swiper>
