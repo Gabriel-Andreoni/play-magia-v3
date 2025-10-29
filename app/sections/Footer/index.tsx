@@ -6,10 +6,7 @@ export function Footer() {
       <div className="w-full p-[2em] flex justify-between flex-wrap gap-6">
         <div className="flex flex-col gap-4">
           <h4 className="font-bold text-lg">Nosso Endereço</h4>
-          <p className="font-bold">Av Rebolças 499 - Jardim Monte Negro - SP</p>
-
-          <h4 className="font-bold text-lg">Horário de Atendimento</h4>
-          <p className="font-bold">Segunda à Sexta 07:30 às 12:30 - 13:30 às 17:30</p>
+          <p className="font-bold">Rua Doutor Eraldo Aurélio Franzese, 71 - Jardim Paiquerê - Valinhos - São Paulo</p>
 
           <ul className="mt-4 flex flex-col gap-4 w-fit">
             <li className="list-none font-bold cursor-pointer">
@@ -28,20 +25,16 @@ export function Footer() {
           <h4 className="font-bold text-lg">Fale Conosco</h4>
           <span className="flex gap-1">
             <h5 className="text-base cursor-pointer">Telefone:</h5>
-            <h5 className="text-base cursor-pointer">(19) 34225567</h5>
+            <h5 className="text-base cursor-pointer">(19) 32520250</h5>
           </span>
           <span className="flex gap-1">
             <h5 className="text-base cursor-pointer">WhatsApp:</h5>
-            <h5 className="text-base cursor-pointer">(19) 999876578</h5>
-          </span>
-          <span className="flex gap-1">
-            <h5 className="text-base cursor-pointer">E-mail:</h5>
-            <h5 className="text-base cursor-pointer">contato@mvplaygrounds.com</h5>
+            <h5 className="text-base cursor-pointer">(19) 9 96084733</h5>
           </span>
         </div>
 
         <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d467692.3953541629!2d-46.92494058902858!3d-23.681434667112956!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce448183a461d1%3A0x9ba94b08ff335bae!2zU8OjbyBQYXVsbywgU1A!5e0!3m2!1spt-PT!2sbr!4v1745540156242!5m2!1spt-PT!2sbr"
+          src="https://www.google.com/maps/embed?pb=!4v1761775894858!6m8!1m7!1sO9lIlAQQdYePxf-JI8LzRw!2m2!1d-22.98288023660557!2d-47.01303833351664!3f48.73499293564683!4f-17.800162325064633!5f0.7820865974627469"
           allowFullScreen
           style={{
             width: '400px',
