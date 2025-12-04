@@ -47,8 +47,8 @@ export default async function Produto({ params }: { params: Promise<{ id: string
                 </div>
             </div>
             <div className="w-full my-16">
-                <ul className="w-full flex flex-wrap justify-center gap-16">
-                    <h2 className="w-full ml-12 text-2xl font-semibold">
+                <ul className="w-[90%] mx-auto flex flex-wrap justify-center gap-16">
+                    <h2 className="w-full text-2xl font-semibold">
                         Produtos Relacionados
                     </h2>
                     {produtosComFotos.reverse().map((produto) => (
