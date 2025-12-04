@@ -27,7 +27,7 @@ export function ProductCard({
     const hasMoreImage = i.large.search("foto2");
     return {
       ...i,
-      large: hasMoreImage ? i.large.replace("http://localhost:1111", "https://api-play-magia-production.up.railway.app") : ''
+      large: hasMoreImage ? i.large.replace("http://localhost:1111", "http://lw0kc8owc0oo0w0ssokco884.147.93.71.68.sslip.io") : ''
     }
   });
 

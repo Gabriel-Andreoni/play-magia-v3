@@ -35,7 +35,7 @@ export function SlideDosProdutos() {
                         <Image
                             src={f.fotos!.large.replace(
                                 "http://localhost:1111",
-                                "https://api-play-magia-production.up.railway.app"
+                                "http://lw0kc8owc0oo0w0ssokco884.147.93.71.68.sslip.io"
                             )}
                             alt={f.titulo}
                             width={500}

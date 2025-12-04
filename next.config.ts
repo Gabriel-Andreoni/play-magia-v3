@@ -18,13 +18,13 @@ const nextConfig: NextConfig = {
             pathname: "/storage/produtos/**"
           },
           {
-            protocol: 'https',
-            hostname: 'api-play-magia-production.up.railway.app',
+            protocol: 'http',
+            hostname: 'lw0kc8owc0oo0w0ssokco884.147.93.71.68.sslip.io',
             pathname: "/storage/clientes/**"
           },
           {
-            protocol: 'https',
-            hostname: 'api-play-magia-production.up.railway.app',
+            protocol: 'http',
+            hostname: 'lw0kc8owc0oo0w0ssokco884.147.93.71.68.sslip.io',
             pathname: "/storage/produtos/**"
           }
         ],

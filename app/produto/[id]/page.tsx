@@ -19,8 +19,6 @@ export default async function Produto({ params }: { params: Promise<{ id: string
         }
     });
 
-    console.log(produtosComFotos)
-
     return (
         <section className="w-full">
             <Menu />
@@ -42,7 +40,7 @@ export default async function Produto({ params }: { params: Promise<{ id: string
                         <p className="mt-8 leading-relaxed">
                             {playground.Descrição_Produto}
                         </p>
-                        <button className="w-2/5 mt-8 py-4 rounded-lg bg-[#2B569C] text-white font-bold text-lg">
+                        <button className="w-2/5 mt-8 py-4 rounded-lg bg-[#444A19] text-white font-bold text-lg cursor-pointer">
                             Fazer Orçamento
                         </button>
                     </div>
@@ -50,7 +48,7 @@ export default async function Produto({ params }: { params: Promise<{ id: string
             </div>
             <div className="w-full my-16">
                 <ul className="w-full flex flex-wrap justify-center gap-16">
-                    <h2 className="w-full text-2xl font-semibold">
+                    <h2 className="w-full ml-12 text-2xl font-semibold">
                         Produtos Relacionados
                     </h2>
                     {produtosComFotos.reverse().map((produto) => (
