@@ -19,7 +19,7 @@ export function Menu() {
       <Image className="ml-6 rounded-full" width={100} height={100} src="/img/play-magia-logo.png" alt="Logo da Play Magia" />
 
       <button className="lg:hidden ml-auto mr-6" onClick={toggleMobileMenu}>
-        <Image src="/img/menu.png" alt="Menu" width={40} height={40} />
+        <Image src="/images/menu.png" alt="Menu" width={40} height={40} />
       </button>
 
       {/* Mobile Menu */}
