@@ -23,7 +23,7 @@ export default async function Produto({ params }: { params: Promise<{ id: string
         <section className="w-full">
             <Menu />
             <div className="w-full mt-24 flex flex-col lg:flex-row">
-                <div className="w-5/12 h-full p-12">
+                <div className="lg:w-5/12 sm:w-full h-full p-12">
                     <ProductSlide
                         Foto1={playground.Foto1}
                         Foto2={playground.Foto2}
@@ -36,11 +36,11 @@ export default async function Produto({ params }: { params: Promise<{ id: string
                 <div className="w-full lg:w-1/2 flex items-center">
 
                     <div className="w-4/5 mx-auto py-16 flex flex-col">
-                        <h1 className="text-5xl font-bold">{playground.Titulo}</h1>
+                        <h1 className="lg:text-5xl sm:text-4xl font-bold">{playground.Titulo}</h1>
                         <p className="mt-8 leading-relaxed">
                             {playground.Descrição_Produto}
                         </p>
-                        <button className="w-2/5 mt-8 py-4 rounded-lg bg-[#444A19] text-white font-bold text-lg cursor-pointer">
+                        <button className="lg:w-2/5 sm:w-full mt-8 py-4 rounded-lg bg-[#444A19] text-white font-bold text-lg cursor-pointer">
                             Fazer Orçamento
                         </button>
                     </div>
