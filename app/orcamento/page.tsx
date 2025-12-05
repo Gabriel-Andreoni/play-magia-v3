@@ -19,12 +19,12 @@ export default function Orcamento() {
           <div className="absolute inset-0 bg-black/30" />
         </div>
 
-        <div className="w-[90%] -mt-48 mb-48 mx-auto p-16 flex bg-[#FDFEFD] rounded-xl z-[1000]">
-          <div className="w-6/12 p-8">
+        <div className="w-[90%] -mt-48 mb-48 mx-auto p-16 flex lg:flex-row sm:flex-col bg-[#FDFEFD] rounded-xl z-[1000]">
+          <div className="lg:w-6/12 sm:w-full lg:p-8 sm:p-2">
             <SlideDosProdutos />
           </div>
 
-          <div className="w-6/12 p-8">
+          <div className="lg:w-6/12 sm:w-full lg:p-8 sm:p-2">
             <FormularioOrcamento />
           </div>
         </div>
