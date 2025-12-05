@@ -2,8 +2,6 @@
 
 import Link from 'next/link';
 
-import Logo from './img/play-magia-logo.png';
-import MenuIcon from './img/menu.png';
 import Image from 'next/image';
 import { useState } from 'react';
 
@@ -18,10 +16,10 @@ export function Menu() {
     <header
     className={`w-full h-[110px] flex items-center sticky top-0 backdrop-blur-md shadow-lg  transition-[height] duration-300 shadow-slate-950/5 z-[1000]`}
     >
-      <Image className="ml-6 rounded-full" width={100} height={100} src={Logo.src} alt="Logo da Play Magia" />
+      <Image className="ml-6 rounded-full" width={100} height={100} src="/img/play-magia-logo.png" alt="Logo da Play Magia" />
 
       <button className="lg:hidden ml-auto mr-6" onClick={toggleMobileMenu}>
-        <Image src={MenuIcon.src} alt="Menu" width={40} height={40} />
+        <Image src="/img/menu.png" alt="Menu" width={40} height={40} />
       </button>
 
       {/* Mobile Menu */}

@@ -3,7 +3,6 @@
 
 import { Menu } from "../componentes/Menu";
 import { BotaoWhatsAppp } from "../componentes/BotaoWhatsAppp";
-import PlaygroundBanner from './img/product-home-banner.jpg'
 import { Footer } from "../sections/Footer";
 import { SlideDosProdutos } from "../componentes/SlideDosProdutos";
 import { FormularioOrcamento } from "../componentes/FormularioOrcamento";
@@ -15,7 +14,7 @@ export default function Orcamento() {
       <Menu />
 
       <main className="w-full flex flex-col relative">
-        <div className="w-full h-[60vh] bg-cover bg-center relative" style={{ backgroundImage: `url(${PlaygroundBanner.src})` }}>
+        <div className="w-full h-[60vh] bg-cover bg-center relative" style={{ backgroundImage: `url(/img/product-home-banner.jpg)` }}>
           <div className="absolute inset-0 bg-black/30" />
         </div>
 

@@ -5,9 +5,6 @@ import { Menu } from "../componentes/Menu";
 import { SwiperSlideComponent } from "../componentes/SwiperSlide";
 import { Footer } from "../sections/Footer";
 import Image from "next/image";
-
-import ProductHomeBanner from './images/product-home-banner.jpg'
-import Avatar from './images/avatar.png';
 import { BotaoWhatsAppp } from "../componentes/BotaoWhatsAppp";
 
 export default function AboutPage() {
@@ -19,7 +16,7 @@ export default function AboutPage() {
         <div
           className="w-full h-[60vh] relative bg-center bg-cover"
           style={{
-            backgroundImage: `url(${ProductHomeBanner.src})`,
+            backgroundImage: `url(/img/product-home-banner.jpg)`,
           }}
         >
           <div className="absolute top-0 left-0 w-full h-full bg-black/30" />
@@ -58,7 +55,7 @@ export default function AboutPage() {
               <SwiperSlideComponent>
                 <SwiperSlide className="w-[200px] h-[400px] p-16 flex-col rounded-3xl bg-[#FAE8BF]">
                   <div className="flex gap-4">
-                    <Image src={Avatar} alt="Avatar" width={80} height={80} />
+                    <Image src="/img/avatar.png" alt="Avatar" width={80} height={80} />
                     <span>
                       <h3 className="font-semibold">Ana Júlia</h3>
                       <h4 className="text-sm font-light">Diretora da Escola Bem-te-vi</h4>
@@ -73,7 +70,7 @@ export default function AboutPage() {
 
                 <SwiperSlide className="w-[200px] h-[400px] p-16 flex-col rounded-3xl bg-[#585C2B]">
                   <div className="flex gap-4">
-                    <Image src={Avatar} alt="Avatar" width={80} height={80} />
+                    <Image src="/img/avatar.png" alt="Avatar" width={80} height={80} />
                     <span>
                       <h3 className="font-semibold text-[#FAE8BF]">Ana Júlia</h3>
                       <h4 className="text-sm font-light text-[#FAE8BF]">Diretora da Escola Bem-te-vi</h4>
@@ -88,7 +85,7 @@ export default function AboutPage() {
 
                 <SwiperSlide className="w-[200px] h-[400px] p-16 flex-col rounded-3xl bg-[#BC7823]">
                   <div className="flex gap-4">
-                    <Image src={Avatar} alt="Avatar" width={80} height={80} />
+                    <Image src="/img/avatar.png" alt="Avatar" width={80} height={80} />
                     <span>
                       <h3 className="font-semibold">Ana Júlia</h3>
                       <h4 className="text-sm font-light">Diretora da Escola Bem-te-vi</h4>

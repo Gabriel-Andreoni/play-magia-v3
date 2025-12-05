@@ -1,7 +1,4 @@
-import backgroundCard1 from './images/about-image-1.jpg';
-import backgroundCard2 from './images/about-image-2.jpg';
-import backgroundCard3 from './images/about-image-3.jpg';
-import backgroundCard4 from './images/about-image-4.jpg';
+
 
 
 
@@ -15,7 +12,7 @@ export function About() {
           {/* Card 1 */}
           <div
             className="w-full h-[300px] p-4 flex flex-col lg:justify-end sm:justify-center gap-4 rounded-[0.8em] relative bg-cover bg-center"
-            style={{ backgroundImage: `url(${backgroundCard1.src})` }}
+            style={{ backgroundImage: `url(/img/about-image-1.jpg)` }}
           >
             <div className="absolute inset-0 bg-black/35  rounded-[0.8em]" />
             <h2 className="text-white lg:text-[1.8em] sm:text-[1.5em] z-10">Projetos Personalizados</h2>
@@ -27,7 +24,7 @@ export function About() {
           {/* Card 2 */}
           <div
             className="w-full lg:h-[500px] sm:h-[300px] p-4 flex flex-col lg:justify-end sm:justify-center rounded-[0.8em] relative bg-cover bg-center"
-            style={{ backgroundImage: `url(${backgroundCard2.src})` }}
+            style={{ backgroundImage: `url(/img/about-image-2.jpg)` }}
           >
             <div className="absolute inset-0 bg-black/35  rounded-[0.8em]" />
             <h2 className="text-white lg:text-[1.8em] sm:text-[1.5em] z-10">Qualidade e Durabilidade</h2>
@@ -42,7 +39,7 @@ export function About() {
           {/* Card 3 */}
           <div
             className="w-full h-[300px] p-4 flex flex-col justify-end gap-4 rounded-[0.8em] relative bg-cover bg-center"
-            style={{ backgroundImage: `url(${backgroundCard3.src})` }}
+            style={{ backgroundImage: `url(/img/about-image-3.jpg)` }}
           >
             <div className="absolute inset-0 bg-black/35  rounded-[0.8em]" />
             <h2 className="text-white lg:text-[1.8em] sm:text-[1.5em] z-10">Consultoria Completa</h2>
@@ -54,7 +51,7 @@ export function About() {
           {/* Card 4 */}
           <div
             className="w-full lg:h-[500px] sm:h-[300px] p-4 flex flex-col justify-end rounded-[0.8em] relative bg-cover bg-center"
-            style={{ backgroundImage: `url(${backgroundCard4.src})` }}
+            style={{ backgroundImage: `url(/img/about-image-4.jpg)` }}
           >
             <div className="absolute inset-0 bg-black/35  rounded-[0.8em]" />
             <h2 className="text-white lg:text-[1.8em] sm:text-[1.5em] z-10">Benefícios e Valorização</h2>
