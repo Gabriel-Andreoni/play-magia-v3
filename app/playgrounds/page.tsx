@@ -14,7 +14,7 @@ export default function Playgrounds() {
 
             <main className="w-full flex flex-col relative">
                 {/* HEADER COM IMAGEM DE FUNDO */}
-                <div className="w-full h-[60vh] bg-cover bg-center relative" style={{ backgroundImage: `url(/img/product-home-banner.jpg)` }}>
+                <div className="w-full h-[60vh] bg-cover bg-center relative" style={{ backgroundImage: `url(/images/product-home-banner.jpg)` }}>
                     <div className="absolute inset-0 bg-black/30" />
                 </div>
 
