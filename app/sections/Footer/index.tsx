@@ -3,7 +3,7 @@ import Link from 'next/link';
 export function Footer() {
   return (
     <footer className="w-full h-auto bg-[#BC7823] lg:p-[6em]">
-      <div className="w-full p-[2em] flex sm:flex-col justify-between flex-wrap gap-6">
+      <div className="w-full p-[2em] flex lg:flex-row sm:flex-col justify-between flex-wrap gap-6">
         <div className="flex flex-col gap-4">
           <h4 className="font-bold text-lg">Nosso Endereço</h4>
           <p className="font-bold">Rua Doutor Eraldo Aurélio Franzese, 71 - Jardim Paiquerê - Valinhos - São Paulo</p>

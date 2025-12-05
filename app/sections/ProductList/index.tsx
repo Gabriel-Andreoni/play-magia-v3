@@ -23,7 +23,7 @@ export async function ProductList() {
         <span className="text-[#FAE8BF]">dos sonhos está aqui!</span>
       </h1>
 
-      <ul className="w-full pb-[8em] flex sm:flex-col justify-center flex-wrap gap-[2em] relative">
+      <ul className="w-full pb-[8em] flex lg:flex-row sm:flex-col justify-center flex-wrap gap-[2em] relative">
         {produtosComFotos.map((produto) => (
           <ProductCard
             key={produto.id}
