@@ -10,7 +10,7 @@ export default async function Produto({ params }: { params: Promise<{ id: string
     const { id } = await params;
     const playground: TProduto = await manifest.from("produtos").findOneById(id);
     const produtosData = await manifest.from("produtos").find();
-    const produtos = (produtosData.data as TProduto[]);
+    const produtos = (produtosData?.data as TProduto[] || []);
 
     const produtosComFotos = produtos.map(({ Foto1, Foto2, Foto3, Foto4, ...rest }) => {
         return {

@@ -7,7 +7,7 @@ import { TProduto } from "@/app/types/TProduto";
 export async function ProductList() {
   const produtosHomePage = await manifest.from("produtos").find();
 
-  const produtos = (produtosHomePage.data as TProduto[]).reverse().slice(0, 3);
+  const produtos = ((produtosHomePage?.data as TProduto[]) || []).reverse().slice(0, 3);
 
   const produtosComFotos = produtos.map(({ Foto1, Foto2, Foto3, Foto4, ...rest }) => {
     return {

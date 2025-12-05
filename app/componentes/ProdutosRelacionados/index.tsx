@@ -17,7 +17,7 @@ export function ProdutosRelacionados({quantProdutos}: {quantProdutos: number}) {
     useEffect(() => {
         async function getProdutos() {
             const playgrounds = await manifest.from("produtos").find();
-            setProdutos(playgrounds.data as TProduto[]);
+            setProdutos(playgrounds?.data as TProduto[] || []);
         }
 
 

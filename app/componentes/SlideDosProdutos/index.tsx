@@ -12,7 +12,7 @@ export function SlideDosProdutos() {
     useEffect(() => {
         async function getProdutos() {
             const playgrounds = await manifest.from("produtos").find();
-            setProdutos(playgrounds.data as TProduto[]);
+            setProdutos(playgrounds?.data as TProduto[] || []);
         }
         getProdutos();
     }, []);
