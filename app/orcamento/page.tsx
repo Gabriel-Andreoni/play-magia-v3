@@ -13,7 +13,7 @@ export default function Orcamento() {
       <Menu />
 
       <main className="w-full flex flex-col relative">
-        <div className="w-full h-[60vh] bg-cover bg-center relative" style={{ backgroundImage: `url(/img/product-home-banner.jpg)` }}>
+        <div className="w-full h-[60vh] bg-cover bg-center relative" style={{ backgroundImage: `url(/images/product-home-banner.jpg)` }}>
           <div className="absolute inset-0 bg-black/30" />
         </div>
 

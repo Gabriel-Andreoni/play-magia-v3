@@ -35,7 +35,7 @@ export function FormularioOrcamento() {
                     </div>
                 </div>
                 <div className="flex items-center gap-2">
-                    <Image className="cursor-pointer" onClick={() => setHasMessage((prevState) => !prevState)} src="/img/plus.png" width={24} height={24} alt="Adicionar Observações" />
+                    <Image className="cursor-pointer" onClick={() => setHasMessage((prevState) => !prevState)} src="/images/plus.png" width={24} height={24} alt="Adicionar Observações" />
                     <span className="font-bold text-sm">Adicionar Observações</span>
                 </div>
 
