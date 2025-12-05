@@ -20,10 +20,10 @@ export default function Playgrounds() {
                 </div>
 
                 {/* CONTEÚDO PRINCIPAL */}
-                <div className="w-[90%] -mt-48 mx-auto p-16 flex bg-[#FDFEFD] rounded-xl z-[1000]">
+                <div className="w-[90%] -mt-48 mx-auto p-16 flex lg:flex-row sm:flex-col bg-[#FDFEFD] rounded-xl z-[1000]">
                     {/* Texto */}
-                    <div className="w-1/2 flex flex-col">
-                        <div className="w-[90%] p-4 rounded-[1.8em] bg-[#F5F4F2]">
+                    <div className="lg:w-1/2 sm:w-full flex flex-col">
+                        <div className="lg:w-[90%] sm:w-full p-4 rounded-[1.8em] bg-[#F5F4F2]">
                             <h1 className="text-2xl font-semibold">Mais do que Playgrounds, Experiências</h1>
                             <h3 className="mt-4 text-base font-light">
                                 Conheça Nosso Portfólio de Playgrounds de Madeira: Diversão, Segurança e Personalização. <br />
@@ -31,7 +31,7 @@ export default function Playgrounds() {
                             </h3>
                         </div>
 
-                        <div className="w-[90%] mt-8 p-4 bg-[#F5F4F2] rounded-[1.8em] flex flex-col">
+                        <div className="lg:w-[90%] sm:w-full mt-8 p-4 bg-[#F5F4F2] rounded-[1.8em] flex flex-col">
                             <p className="mt-4 leading-relaxed font-light">
                                 Em nosso portfólio, você encontra uma seleção dos principais modelos de playgrounds de madeira, desenvolvidos para diferentes tipos de espaços e necessidades. Cada projeto é pensado para proporcionar diversão, estimular a criatividade e garantir a máxima segurança das crianças, utilizando madeira de qualidade, design inovador e acabamentos impecáveis. Apresentamos opções que vão desde estruturas clássicas até grandes projetos personalizados, para áreas residenciais, escolas, condomínios, hotéis, clubes e praças públicas.
                             </p>
@@ -42,8 +42,8 @@ export default function Playgrounds() {
                     </div>
 
                     {/* Slide */}
-                    <div className="w-1/2 px-4 pb-4 flex justify-center">
-                        <div className="w-full p-8">
+                    <div className="lg:w-1/2 sm:w-full px-4 pb-4 flex justify-center -order-1">
+                        <div className="w-full lg:p-8 sm:p-2">
                             <SlideDosProdutos />
                         </div>
                     </div>

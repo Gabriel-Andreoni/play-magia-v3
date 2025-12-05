@@ -39,7 +39,7 @@ export function Menu() {
             </li>
             <li className="list-none text-[1.2em] font-bold cursor-pointer">
               <Link
-                href="/about"
+                href="#about"
                 className="text-white relative after:content-[''] after:absolute after:left-0 after:top-[110%] after:w-1/2 after:h-[2px] after:bg-[#4D5020] after:transition-all after:duration-300 hover:after:w-full"
                 onClick={toggleMobileMenu}
               >
