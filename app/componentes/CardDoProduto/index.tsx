@@ -32,7 +32,7 @@ export function ProductCard({
   });
 
   return (
-    <li className="w-[25%] list-none rounded-md relative  transition-all duration-300 hover:-translate-y-[3%]">
+    <li className="lg:w-[25%] sm:w-full list-none rounded-md relative  transition-all duration-300 hover:-translate-y-[3%]">
       <div className="w-full h-[300px] rounded-t-md overflow-hidden">
         {updatedImages.map((image, index) => (
           <Image

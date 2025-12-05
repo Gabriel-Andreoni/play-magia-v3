@@ -17,13 +17,13 @@ export async function ProductList() {
   });
 
   return (
-    <section className="w-full min-h-auto px-[6em] bg-[#A05625]" id="produtos">
-      <h1 className="py-2 flex flex-col text-center text-[6em] text-white text-balance">
+    <section className="w-full min-h-auto lg:px-[6em] sm:px-[2em] bg-[#A05625]" id="produtos">
+      <h1 className="py-2 sm:my-6 flex flex-col text-center lg:text-[6em] sm:text-[1.5em] text-white text-balance">
         O Playground{" "}
         <span className="text-[#FAE8BF]">dos sonhos está aqui!</span>
       </h1>
 
-      <ul className="w-full pb-[8em] flex justify-center flex-wrap gap-[2em] relative">
+      <ul className="w-full pb-[8em] flex sm:flex-col justify-center flex-wrap gap-[2em] relative">
         {produtosComFotos.map((produto) => (
           <ProductCard
             key={produto.id}
