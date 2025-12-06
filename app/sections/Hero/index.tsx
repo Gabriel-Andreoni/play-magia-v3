@@ -11,8 +11,11 @@ export function Hero() {
                     Crie <span className="text-[#FAE8BF]">Memórias Incríveis</span>
                 </h1>
 
-                <p className="w-[70%] text-[1.2em] text-center leading-[1.5em] text-white font-light">
-                    Transforme o espaço da sua escola, condomínio ou parque em um lugar mágico.<br/> Com playgrounds seguros, duráveis e cheios de diversão, oferecemos experiências que encantam crianças e tranquilizam adultos. Conheça nossas soluções e crie memórias que vão durar para sempre.
+                <p className="lg:w-[70%] sm:w-full text-[1.2em] text-center leading-[1.5em] text-white font-light sm:text-pretty">
+                    Transforme o espaço da sua escola, condomínio ou parque em um lugar mágico.
+                </p>
+                <p className="lg:w-[70%] sm:w-full text-[1.2em] text-center leading-[1.5em] text-white font-light sm:text-pretty">
+                    Com playgrounds seguros, duráveis e cheios de diversão, oferecemos experiências que encantam crianças e tranquilizam adultos. Conheça nossas soluções e crie memórias que vão durar para sempre.
                 </p>
 
                 <Link className="w-fit lg:p-6 sm:p-4 mt-8 rounded-full bg-[#4D5020]/95 text-white cursor-pointer text-[1.1em]" href="#produtos">
