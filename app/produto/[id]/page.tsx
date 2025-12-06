@@ -23,7 +23,7 @@ export default async function Produto({ params }: { params: Promise<{ id: string
         <section className="w-full">
             <Menu />
             <div className="w-full mt-24 flex flex-col lg:flex-row">
-                <div className="lg:w-5/12 sm:w-full h-full p-12">
+                <div className="lg:w-5/12 sm:w-full h-full lg:p-12 sm:p-6">
                     <ProductSlide
                         Foto1={playground.Foto1}
                         Foto2={playground.Foto2}
