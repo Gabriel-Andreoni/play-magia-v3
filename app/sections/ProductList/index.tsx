@@ -1,9 +1,9 @@
 import { ProductCard } from "@/app/componentes/CardDoProduto";
-import { manifest } from "@/app/lib/manifest";
+import { getPlaygrounds } from "@/app/lib/playgrounds/getPlaygrounds";
 import { TProduto } from "@/app/types/TProduto";
 
 export async function ProductList() {
-  const produtosHomePage = await manifest.from("produtos").find();
+  const produtosHomePage = await getPlaygrounds();
 
   const produtos = ((produtosHomePage?.data as TProduto[]) || []).reverse().slice(0, 3);
 

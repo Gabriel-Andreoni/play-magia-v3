@@ -1,5 +1,3 @@
-"use client";
-
 import { Menu } from "../componentes/Menu";
 import { BotaoWhatsAppp } from "../componentes/BotaoWhatsAppp";
 import { Footer } from "../sections/Footer";
