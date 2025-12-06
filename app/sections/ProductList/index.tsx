@@ -1,5 +1,3 @@
-120250003761884;
-
 import { ProductCard } from "@/app/componentes/CardDoProduto";
 import { manifest } from "@/app/lib/manifest";
 import { TProduto } from "@/app/types/TProduto";
