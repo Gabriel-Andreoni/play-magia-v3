@@ -17,7 +17,7 @@ export default function Playgrounds() {
                 </div>
 
                 {/* CONTEÚDO PRINCIPAL */}
-                <div className="w-[90%] -mt-48 mx-auto p-16 flex lg:flex-row sm:flex-col bg-[#FDFEFD] rounded-xl z-[1000]">
+                <div className="w-[90%] -mt-48 mx-auto lg:p-16 sm:p-4 flex lg:flex-row sm:flex-col bg-[#FDFEFD] rounded-xl z-[1000]">
                     {/* Texto */}
                     <div className="lg:w-1/2 sm:w-full flex flex-col">
                         <div className="lg:w-[90%] sm:w-full p-4 rounded-[1.8em] bg-[#F5F4F2]">
@@ -39,7 +39,7 @@ export default function Playgrounds() {
                     </div>
 
                     {/* Slide */}
-                    <div className="lg:w-1/2 sm:w-full px-4 pb-4 flex justify-center -order-1">
+                    <div className="lg:w-1/2 sm:w-full lg:px-4 sm:px-2 pb-4 flex justify-center -order-1">
                         <div className="w-full lg:p-8 sm:p-2">
                             <SlideDosProdutos />
                         </div>
