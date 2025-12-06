@@ -17,7 +17,7 @@ export default function Playgrounds() {
                 </div>
 
                 {/* CONTEÚDO PRINCIPAL */}
-                <div className="w-[90%] -mt-48 mx-auto lg:p-16 sm:p-4 flex lg:flex-row sm:flex-col bg-[#FDFEFD] rounded-xl z-[1000]">
+                <div className="w-[90%] -mt-48 mx-auto lg:p-16 sm:p-4 flex lg:flex-row sm:flex-col bg-[#FDFEFD] rounded-xl lg:z-[1000] sm:z-0">
                     {/* Texto */}
                     <div className="lg:w-1/2 sm:w-full flex flex-col">
                         <div className="lg:w-[90%] sm:w-full p-4 rounded-[1.8em] bg-[#F5F4F2]">
