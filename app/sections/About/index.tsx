@@ -4,7 +4,7 @@
 
 export function About() {
   return (
-    <section className="w-full h-auto lg:p-[6em] sm:px-[2em] sm:mb-12" id="about">
+    <section className="w-full h-auto lg:p-[6em] sm:px-[2em] sm:mb-12" id="sobre">
       <h2 className="mb-2 sm:my-6 text-center lg:text-[6em] sm:text-[1.5em] text-[#A05625]">Transformando Espaços em Experiências</h2>
 
       <div className="w-full h-full flex flex-col md:flex-row sm:gap-6">

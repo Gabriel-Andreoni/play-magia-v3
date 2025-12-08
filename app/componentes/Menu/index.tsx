@@ -16,10 +16,12 @@ export function Menu() {
     <header
     className={`w-full h-[110px] flex items-center sticky top-0 backdrop-blur-md shadow-lg  transition-[height] duration-300 shadow-slate-950/5 z-[1000]`}
     >
-      <Image className="ml-6 rounded-full" width={100} height={100} src="/images/play-magia-logo.png" alt="Logo da Play Magia" />
+      <Link href="/">
+        <Image className="ml-6 rounded-full" width={100} height={100} src="/images/play-magia-logo.png" alt="Logo da Play Magia" />
+      </Link>
 
       <button className="lg:hidden ml-auto mr-6" onClick={toggleMobileMenu}>
-        <Image src="/images/menu.png" alt="Menu" width={40} height={40} />
+          <Image src="/images/menu.png" alt="Menu" width={40} height={40} />
       </button>
 
       {/* Mobile Menu */}
@@ -37,7 +39,7 @@ export function Menu() {
             </li>
             <li className="list-none text-[1.2em] font-bold cursor-pointer">
               <Link
-                href="#about"
+                href="#sobre"
                 className="text-white relative after:content-[''] after:absolute after:left-0 after:top-[110%] after:w-1/2 after:h-[2px] after:bg-[#4D5020] after:transition-all after:duration-300 hover:after:w-full"
                 onClick={toggleMobileMenu}
               >
@@ -88,7 +90,7 @@ export function Menu() {
           </li>
           <li className="list-none text-[1.2em] font-bold cursor-pointer">
             <Link
-              href="/about"
+              href="#sobre"
               className="text-black relative after:content-[''] after:absolute after:left-0 after:top-[110%] after:w-1/2 after:h-[2px] after:bg-[#4D5020] after:transition-all after:duration-300 hover:after:w-full"
             >
               Sobre Nós
