@@ -34,6 +34,10 @@ export function FormularioOrcamento() {
                         <input className="p-2 border rounded-lg outline-none" type="text" name="estado" id="estado" />
                     </div>
                 </div>
+                <div className="w-full">
+                  <label className="font-light" htmlFor="mensagem">Mensagem</label>
+                  <textarea className="w-full p-2 border rounded-lg outline-none resize-none" name="mensagem" id="mensagem"></textarea>
+                </div>
                 <div className="flex items-center gap-2">
                     <Image className="cursor-pointer" onClick={() => setHasMessage((prevState) => !prevState)} src="/images/plus.png" width={24} height={24} alt="Adicionar Observações" />
                     <span className="font-bold text-sm">Adicionar Observações</span>
