@@ -7,11 +7,11 @@ import { Footer } from "@/app/sections/Footer";
 import { TProduto } from "@/app/types/TProduto";
 
 type Props = {
-  params: { id: string };
+  params: Promise<{ id: string }>
 };
 
 export async function generateMetadata({ params }: Props, parent: ResolvingMetadata): Promise<Metadata> {
-  const { id } = params;
+  const { id } = await params;
   const playground: TProduto = await manifest.from("produtos").findOneById(id);
 
   const previousImages = (await parent).openGraph?.images || [];
