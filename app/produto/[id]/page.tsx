@@ -31,7 +31,7 @@ export async function generateMetadata({ params }: Props, parent: ResolvingMetad
   };
 }
 
-export default async function Produto({ params }: { params: { id: string } }) {
+export default async function Produto({ params }: { params: Promise<{ id: string }> }) {
     const { id } = await params;
     const playground: TProduto = await manifest.from("produtos").findOneById(id);
     const produtosData = await manifest.from("produtos").find();
