@@ -1,3 +1,4 @@
+import { Metadata, ResolvingMetadata } from "next";
 import { Menu } from "@/app/componentes/Menu";
 import { ProductCard } from "@/app/componentes/CardDoProduto";
 import { ProductSlide } from "@/app/componentes/SlideDoProduto";
@@ -5,8 +6,32 @@ import { manifest } from "@/app/lib/manifest";
 import { Footer } from "@/app/sections/Footer";
 import { TProduto } from "@/app/types/TProduto";
 
+type Props = {
+  params: { id: string };
+};
 
-export default async function Produto({ params }: { params: Promise<{ id: string }> }) {
+export async function generateMetadata({ params }: Props, parent: ResolvingMetadata): Promise<Metadata> {
+  const { id } = params;
+  const playground: TProduto = await manifest.from("produtos").findOneById(id);
+
+  const previousImages = (await parent).openGraph?.images || [];
+
+  const imageUrl = playground.Foto1?.large
+    ? playground.Foto1.large.replace("http://localhost:1111", "http://lw0kc8owc0oo0w0ssokco884.147.93.71.68.sslip.io")
+    : "/images/play-magia-logo.png";
+
+  return {
+    title: `${playground.Titulo} | Play Magia`,
+    description: playground.Descrição_Produto,
+    openGraph: {
+      title: `${playground.Titulo} | Play Magia`,
+      description: playground.Descrição_Produto,
+      images: [imageUrl, ...previousImages],
+    },
+  };
+}
+
+export default async function Produto({ params }: { params: { id: string } }) {
     const { id } = await params;
     const playground: TProduto = await manifest.from("produtos").findOneById(id);
     const produtosData = await manifest.from("produtos").find();
