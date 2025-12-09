@@ -2,10 +2,13 @@
 import { useState } from "react";
 import Image from "next/image"
 
+type PlaygroundInfo = {
+  titulo: string | undefined;
+  ID: string | undefined;
+}
 
-export function FormularioOrcamento() {
-    const [hasMessage, setHasMessage] = useState<boolean>(false);
-
+export function FormularioOrcamento({titulo, ID}:PlaygroundInfo) {
+  const [hasMessage, setHasMessage] = useState<boolean>(false);
     return (
         <>
             <h2 className="font-bold">Seus Dados</h2>
@@ -36,7 +39,11 @@ export function FormularioOrcamento() {
                 </div>
                 <div className="w-full">
                   <label className="font-light" htmlFor="mensagem">Mensagem</label>
-                  <textarea className="w-full p-2 border rounded-lg outline-none resize-none" name="mensagem" id="mensagem"></textarea>
+                  <textarea
+                    className="w-full p-2 border rounded-lg outline-none resize-none"
+                    id="mensagem"
+                    defaultValue={titulo && `Olá, eu gostaria de mais informações a respeito do playground ${titulo}`}
+                  ></textarea>
                 </div>
                 <div className="flex items-center gap-2">
                     <Image className="cursor-pointer" onClick={() => setHasMessage((prevState) => !prevState)} src="/images/plus.png" width={24} height={24} alt="Adicionar Observações" />
