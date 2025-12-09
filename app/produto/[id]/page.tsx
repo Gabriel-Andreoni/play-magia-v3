@@ -5,6 +5,7 @@ import { ProductSlide } from "@/app/componentes/SlideDoProduto";
 import { manifest } from "@/app/lib/manifest";
 import { Footer } from "@/app/sections/Footer";
 import { TProduto } from "@/app/types/TProduto";
+import { BotaoOrcamento } from "../_components/BotaoOrcamento";
 
 type Props = {
   params: Promise<{ id: string }>
@@ -65,9 +66,7 @@ export default async function Produto({ params }: { params: Promise<{ id: string
                         <p className="mt-8 leading-relaxed">
                             {playground.Descrição_Produto}
                         </p>
-                        <button className="lg:w-2/5 sm:w-full mt-8 py-4 rounded-lg bg-[#444A19] text-white font-bold text-lg cursor-pointer">
-                            Fazer Orçamento
-                        </button>
+                        <BotaoOrcamento Titulo={playground.Titulo} id={playground.id} />
                     </div>
                 </div>
             </div>
