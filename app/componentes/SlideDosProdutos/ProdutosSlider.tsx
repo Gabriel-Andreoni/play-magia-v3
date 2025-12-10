@@ -34,7 +34,7 @@ export function ProdutosSlider({ fotos, modo = "padrao" }: ProdutosSliderProps) 
   const [playgroundSelecionado, setPlaygroundSelecionado] = useState<PlaygroundInfo>();
 
   useEffect(() => {
-    const savedInfo = localStorage.getItem("playgroundInfo");
+    const savedInfo = sessionStorage.getItem("playgroundInfo");
     if (savedInfo) {
       setPlaygroundSelecionado(JSON.parse(savedInfo));
     }

@@ -19,7 +19,7 @@ export default function OrcamentoLayout({ children }: OrcamentoLayoutProps) {
   const [playgroundSelecionado, setPlaygroundSelecionado] = useState<PlaygroundInfo>();
   
   useEffect(() => {
-    const playgroundInfo: PlaygroundInfo = JSON.parse(localStorage.getItem("playgroundInfo") || "{}");
+    const playgroundInfo: PlaygroundInfo = JSON.parse(sessionStorage.getItem("playgroundInfo") || "{}");
     setPlaygroundSelecionado(playgroundInfo);
   }, []);
   

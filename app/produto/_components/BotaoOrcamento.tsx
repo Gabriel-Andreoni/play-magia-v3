@@ -11,7 +11,7 @@ function savePlaygroundInfo({Titulo, id}: PlaygroundInfo){
     ID: id,
   }
   
-  return localStorage.setItem('playgroundInfo', JSON.stringify(playgroundInfo));
+  return sessionStorage.setItem('playgroundInfo', JSON.stringify(playgroundInfo));
 }
 
 export function BotaoOrcamento({Titulo, id}: PlaygroundInfo){
