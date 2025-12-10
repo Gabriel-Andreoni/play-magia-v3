@@ -23,7 +23,6 @@ export default function OrcamentoLayout({ children }: OrcamentoLayoutProps) {
     setPlaygroundSelecionado(playgroundInfo);
   }, []);
   
-  console.log(playgroundSelecionado)
   return (
     <div className="w-full h-auto">
       <Menu />
@@ -39,12 +38,12 @@ export default function OrcamentoLayout({ children }: OrcamentoLayoutProps) {
           </div>
 
           <div className="lg:w-6/12 sm:w-full lg:p-8 sm:p-2">
-            {playgroundSelecionado?.titulo && (
+            {playgroundSelecionado?.titulo ? (
               <FormularioOrcamento
                 titulo={playgroundSelecionado.titulo}
                 ID={playgroundSelecionado.ID}
               />
-            )}
+            ): <FormularioOrcamento />}
           </div>
         </div>
         <BotaoWhatsAppp />

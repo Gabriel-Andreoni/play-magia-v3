@@ -3,8 +3,8 @@ import { useState } from "react";
 import Image from "next/image"
 
 type PlaygroundInfo = {
-  titulo: string | undefined;
-  ID: string | undefined;
+  titulo?: string | undefined;
+  ID?: string | undefined;
 }
 
 export function FormularioOrcamento({titulo, ID}:PlaygroundInfo) {

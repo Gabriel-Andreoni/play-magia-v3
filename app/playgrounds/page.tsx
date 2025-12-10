@@ -41,7 +41,7 @@ export default function Playgrounds() {
                     {/* Slide */}
                     <div className="lg:w-1/2 sm:w-full lg:px-4 sm:px-2 pb-4 flex justify-center -order-1">
                         <div className="w-full lg:p-8 sm:p-2">
-                            <SlideDosProdutos />
+                            <SlideDosProdutos modo="padrao" />
                         </div>
                     </div>
                 </div>

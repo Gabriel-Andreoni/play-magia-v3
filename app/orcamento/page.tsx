@@ -4,7 +4,7 @@ import OrcamentoLayout from "./_components/OrcamentoLayout";
 export default function Orcamento() {
   return (
     <OrcamentoLayout>
-      <SlideDosProdutos />
+      <SlideDosProdutos modo="orcamento" />
     </OrcamentoLayout>
   );
 }
