@@ -24,12 +24,10 @@ export function Footer() {
         <div className="flex flex-col gap-4">
           <h4 className="font-bold text-lg">Fale Conosco</h4>
           <span className="flex gap-1">
-            <h5 className="text-base cursor-pointer">Telefone:</h5>
-            <h5 className="text-base cursor-pointer">(19) 32520250</h5>
-          </span>
-          <span className="flex gap-1">
             <h5 className="text-base cursor-pointer">WhatsApp:</h5>
-            <h5 className="text-base cursor-pointer">(19) 9 96084733</h5>
+            <h5 className="text-base cursor-pointer">
+              <Link href="https://wa.me/5519994814562" target="_blank" rel="noopener noreferrer">(19) 994814562</Link>
+            </h5>
           </span>
         </div>
 
