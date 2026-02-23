@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Ubuntu } from "next/font/google";
 import "./globals.css";
+import Script from 'next/script';
 
 const ubuntu = Ubuntu({
   weight: ['300', '500'],
@@ -46,6 +47,18 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-BR">
+      <Script
+        src="https://www.googletagmanager.com/gtag/js?id=AW-17933599319"
+        strategy="afterInteractive"
+      />
+      <Script id="gtag-init" strategy="afterInteractive">
+        {`
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'AW-17933599319');
+`}
+      </Script>
       <body
         className={`${ubuntu.className} antialiased`}
       >
